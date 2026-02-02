@@ -21,5 +21,13 @@ fs.readFile('./docs/blog1.txt',(err,data)=>{
             console.log(data.toString());
         }
 });
+// Creating directories
 
-
+fs.mkdir('./gallary',(err)=>{
+    if(err){
+        console.log(err);
+    }
+    else{
+        console.log('folder created');
+    }
+});
