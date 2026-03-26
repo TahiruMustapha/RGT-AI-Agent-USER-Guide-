@@ -44,7 +44,7 @@
     {
       "group": "Guides",
       "pages": [
-        "Rgt docs",
+        "rgt-docs/Rgt docs",
         "quickstart",
         "development"
       ]

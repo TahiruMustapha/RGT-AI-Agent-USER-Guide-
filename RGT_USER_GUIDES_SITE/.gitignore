@@ -1,0 +1,5 @@
+node_modules/
+export.zip
+docs-build/
+temp-out
+.mintlify/
