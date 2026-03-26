@@ -1,0 +1,52 @@
+# TEMPLATE: Filtered PR Review
+# ──────────────────────────────
+# Only reviews PRs targeting main or release branches.
+# Skips WIP, draft, bot, and labelled PRs.
+# Adjust the filters below to match your team's workflow.
+#
+# SETUP:
+#   1. Add GEMINI_API_KEY to repo secrets
+#   2. Save as .github/workflows/pr-review.yml
+#   3. Adjust filters below as needed
+
+name: PR Review
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: read
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ghcr.io/madibalive/copilot-for-github:latest
+        with:
+          provider: google
+          api-key: ${{ secrets.GEMINI_API_KEY }}
+          model: gemini-3-pro-preview
+          reasoning: medium
+
+          # ── Branch filters ──────────────────────────────────────
+          include-base-branches: "main,release/*"    # only PRs targeting these branches
+          # exclude-head-branches: "chore/*,docs/*"  # uncomment to skip these source branches
+
+          # ── Label filters ───────────────────────────────────────
+          exclude-labels: "wip,do-not-review,skip-review"
+
+          # ── Keyword filters ─────────────────────────────────────
+          skip-keywords: "WIP,draft,DO NOT MERGE"
+
+          # ── Author filters ──────────────────────────────────────
+          exclude-bots: "true"                       # skip Dependabot, Renovate (default)
+          # include-authors: "alice,bob"             # uncomment to whitelist specific authors
+
+          # ── Trigger controls ────────────────────────────────────
+          trigger-on-updates: "true"                 # set false to only review on PR open

@@ -1,0 +1,37 @@
+# TEMPLATE: Google Vertex AI (no API key — uses GCP credentials)
+# ─────────────────────────────────────────────────────────────────
+# SETUP:
+#   Add these to repo secrets:
+#     GOOGLE_CLOUD_PROJECT  — your GCP project ID
+#     GOOGLE_CLOUD_LOCATION — e.g. us-central1
+#
+# Vertex AI uses Application Default Credentials (ADC).
+# No api-key required unless you prefer a Vertex API key.
+
+name: PR Review
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: read
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ghcr.io/madibalive/copilot-for-github:latest
+        with:
+          provider: google-vertex   # aliases: vertex, vertex-ai
+          model: gemini-3-pro-preview
+          reasoning: medium
+          # api-key: ${{ secrets.VERTEX_AI_API_KEY }}  # optional if using ADC
+        env:
+          GOOGLE_CLOUD_PROJECT: ${{ secrets.GOOGLE_CLOUD_PROJECT }}
+          GOOGLE_CLOUD_LOCATION: ${{ secrets.GOOGLE_CLOUD_LOCATION }}

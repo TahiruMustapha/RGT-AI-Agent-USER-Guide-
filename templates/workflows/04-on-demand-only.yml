@@ -1,0 +1,42 @@
+# TEMPLATE: On-Demand Review Only
+# ──────────────────────────────────
+# No automatic reviews. Team members trigger reviews manually by
+# typing !review or @my-reviewer review in a PR comment.
+#
+# SETUP:
+#   1. Add GEMINI_API_KEY to repo secrets
+#   2. Save as .github/workflows/pr-review.yml
+#   3. Change bot-name to whatever name your team will use
+#
+# USAGE (in a PR comment):
+#   !explain
+#   !security
+#   @my-reviewer explain the auth changes
+#   @my-reviewer security
+
+name: PR Review (On Demand)
+
+on:
+  pull_request:
+    types: [opened, synchronize]   # needed so workflow registers on the PR
+  issue_comment:
+    types: [created]               # this is what catches the !command triggers
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: read
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ghcr.io/madibalive/copilot-for-github:latest
+        with:
+          provider: google
+          api-key: ${{ secrets.GEMINI_API_KEY }}
+          model: gemini-3-pro-preview
+          reasoning: medium
+          skip-automatic: "true"       # disables auto-review on open/push
+          bot-name: "my-reviewer"      # change this to your preferred bot name

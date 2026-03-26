@@ -1,0 +1,33 @@
+# TEMPLATE: Basic PR Review
+# ─────────────────────────
+# Reviews every PR automatically using Google Gemini.
+# This is the recommended starting point for most teams.
+#
+# SETUP:
+#   1. Add GEMINI_API_KEY to repo secrets (Settings → Secrets → Actions)
+#   2. Save this file as .github/workflows/pr-review.yml
+
+name: PR Review
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+  issue_comment:
+    types: [created]        # enables !command and @bot triggers in PR comments
+
+permissions:
+  contents: write           # saves learned preferences to .github/copilot-learned.json
+  pull-requests: write      # posts comments and suggestions
+  issues: read              # reads 👍/👎 reactions for learning
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ghcr.io/madibalive/copilot-for-github:latest
+        with:
+          provider: google
+          api-key: ${{ secrets.GEMINI_API_KEY }}
+          model: gemini-3-pro-preview
+          reasoning: medium           # recommended for thorough reviews

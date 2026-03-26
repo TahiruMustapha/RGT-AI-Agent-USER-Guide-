@@ -1,0 +1,97 @@
+# TEMPLATE: OpenAI-Compatible Providers
+# ────────────────────────────────────────
+# Any provider that implements the OpenAI API spec works with provider: openai
+# by pointing it at the right base URL via an environment variable.
+#
+# This covers: Together AI, Fireworks AI, Perplexity, Ollama (local),
+# LM Studio (local), Anyscale, Lepton, and any self-hosted vLLM / text-generation-inference.
+#
+# SETUP (pick your provider below and follow its instructions):
+
+name: PR Review
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: read
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # ── Option A: Together AI ────────────────────────────────────────
+      # Sign up at api.together.xyz → API Keys → Create
+      # Add TOGETHER_API_KEY to repo secrets
+      - uses: ghcr.io/madibalive/copilot-for-github:latest
+        with:
+          provider: openrouter           # Together AI models are available via OpenRouter
+          api-key: ${{ secrets.OPENROUTER_KEY }}
+          model: meta-llama/llama-3.3-70b-instruct
+        # OR use Together directly (openai-compatible):
+        # with:
+        #   provider: openai
+        #   api-key: ${{ secrets.TOGETHER_API_KEY }}
+        #   model: meta-llama/Llama-3.3-70B-Instruct-Turbo
+        # env:
+        #   OPENAI_BASE_URL: https://api.together.xyz/v1
+
+      # ── Option B: Fireworks AI ───────────────────────────────────────
+      # Sign up at fireworks.ai → API Keys
+      # Add FIREWORKS_API_KEY to repo secrets
+      # - uses: ghcr.io/madibalive/copilot-for-github:latest
+      #   with:
+      #     provider: openai
+      #     api-key: ${{ secrets.FIREWORKS_API_KEY }}
+      #     model: accounts/fireworks/models/llama-v3p3-70b-instruct
+      #   env:
+      #     OPENAI_BASE_URL: https://api.fireworks.ai/inference/v1
+
+      # ── Option C: Perplexity ─────────────────────────────────────────
+      # Sign up at docs.perplexity.ai → API Keys
+      # Add PERPLEXITY_API_KEY to repo secrets
+      # - uses: ghcr.io/madibalive/copilot-for-github:latest
+      #   with:
+      #     provider: openai
+      #     api-key: ${{ secrets.PERPLEXITY_API_KEY }}
+      #     model: llama-3.1-sonar-large-128k-online
+      #   env:
+      #     OPENAI_BASE_URL: https://api.perplexity.ai
+
+      # ── Option D: Ollama (self-hosted, local runner) ─────────────────
+      # Requires a self-hosted runner with Ollama running on it.
+      # No API key needed for local Ollama.
+      # - uses: ghcr.io/madibalive/copilot-for-github:latest
+      #   with:
+      #     provider: openai
+      #     api-key: "ollama"            # Ollama ignores the key but it must not be empty
+      #     model: llama3.3:70b          # must match a pulled Ollama model
+      #   env:
+      #     OPENAI_BASE_URL: http://localhost:11434/v1
+
+      # ── Option E: LM Studio (self-hosted) ───────────────────────────
+      # Requires a self-hosted runner with LM Studio server running.
+      # - uses: ghcr.io/madibalive/copilot-for-github:latest
+      #   with:
+      #     provider: openai
+      #     api-key: "lm-studio"         # placeholder — LM Studio ignores the key
+      #     model: your-loaded-model-id  # matches the model loaded in LM Studio
+      #   env:
+      #     OPENAI_BASE_URL: http://localhost:1234/v1
+
+      # ── Option F: Self-hosted vLLM ───────────────────────────────────
+      # For teams running vLLM or text-generation-inference on their own infra.
+      # - uses: ghcr.io/madibalive/copilot-for-github:latest
+      #   with:
+      #     provider: openai
+      #     api-key: ${{ secrets.VLLM_API_KEY }}
+      #     model: meta-llama/Llama-3.3-70B-Instruct  # must match served model name
+      #   env:
+      #     OPENAI_BASE_URL: https://your-vllm-server.internal/v1
