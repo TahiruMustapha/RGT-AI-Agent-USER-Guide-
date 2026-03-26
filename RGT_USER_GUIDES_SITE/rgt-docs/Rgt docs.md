@@ -1,4 +1,4 @@
-# Copilot for GitHub — Documentation
+# Copilot for GitHub — Documentation By Razak
 
 AI-powered PR reviewer that reads your full codebase, posts inline comments, suggests fixes, and learns from your team's feedback.
 
