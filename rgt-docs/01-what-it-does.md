@@ -1,6 +1,6 @@
 [← Documentation](/rgt-docs/index)
 
----
+--- .
 
 # What is Copilot for GitHub?
 
@@ -53,13 +53,13 @@ Found 1 high-severity issue, 2 suggestions.
 
 ## What it does NOT do
 
-| ✅ Does | ❌ Does not |
-|---|---|
-| Post comments and suggestions | Block or approve merges |
-| Review logic and security | Replace your linter |
-| Learn from 👍 / 👎 reactions | Write or commit code itself |
-| Explain code in plain English | Run your tests |
-| Open maintenance PRs on a schedule | Auto-merge anything |
+| ✅ Does                            | ❌ Does not                 |
+| ---------------------------------- | --------------------------- |
+| Post comments and suggestions      | Block or approve merges     |
+| Review logic and security          | Replace your linter         |
+| Learn from 👍 / 👎 reactions       | Write or commit code itself |
+| Explain code in plain English      | Run your tests              |
+| Open maintenance PRs on a schedule | Auto-merge anything         |
 
 ---
 
