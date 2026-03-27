@@ -1,20 +1,128 @@
 {
-  "name": "RGT AI Agent User Guide",
+  "$schema": "https://mintlify.com/docs.json",
+  "name": "RGT User Guide",
+  "theme": "prism",
+  "colors": {
+    "primary": "#16A34A",
+    "light": "#07C983",
+    "dark": "#15803D"
+  },
+  "favicon": "/favicon.svg",
   "navigation": [
     {
-      "group": "Getting Started",
+      "group": "Introduction",
       "pages": [
-        "index"
+        "rgt-docs/Rgt docs",
+        "rgt-docs/01-what-it-does"
       ]
     },
     {
-      "group": "User Guide",
+      "group": "Getting Started",
       "pages": [
-        "motion-page",
-        "ai-agent",
-        "api-keys"
+        "rgt-docs/02-setup",
+        "rgt-docs/03-team-context"
+      ]
+    },
+    {
+      "group": "Features",
+      "pages": [
+        "rgt-docs/04-filtering-prs",
+        "rgt-docs/05-on-demand-triggers",
+        "rgt-docs/06-custom-commands",
+        "rgt-docs/07-nightly-maintenance"
+      ]
+    },
+    {
+      "group": "Reference",
+      "pages": [
+        "rgt-docs/08-learning",
+        "rgt-docs/09-options-reference",
+        "rgt-docs/providers",
+        "rgt-docs/10-faq"
+      ]
+    },
+    {
+      "group": "Guides",
+      "pages": [
+        "rgt-docs/Rgt docs",
+        "quickstart",
+        "development"
+      ]
+    },
+    {
+      "group": "Customization",
+      "pages": [
+        "essentials/settings",
+        "essentials/navigation"
+      ]
+    },
+    {
+      "group": "Writing content",
+      "pages": [
+        "essentials/markdown",
+        "essentials/code",
+        "essentials/images",
+        "essentials/reusable-snippets"
+      ]
+    },
+    {
+      "group": "AI tools",
+      "pages": [
+        "ai-tools/cursor",
+        "ai-tools/claude-code",
+        "ai-tools/windsurf"
+      ]
+    },
+    {
+      "group": "API documentation",
+      "pages": [
+        "api-reference/introduction"
+      ]
+    },
+    {
+      "group": "Endpoint examples",
+      "pages": [
+        "api-reference/endpoint/get",
+        "api-reference/endpoint/create",
+        "api-reference/endpoint/delete",
+        "api-reference/endpoint/webhook"
       ]
     }
   ],
-  "theme": "mint"
+  "logo": {
+    "light": "/logo/rgt_logo.png",
+    "dark": "/logo/rgt_logo.png"
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Support",
+        "href": "mailto:hi@mintlify.com"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Dashboard",
+      "href": "https://dashboard.mintlify.com"
+    }
+  },
+  "contextual": {
+    "options": [
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
+  },
+  "footer": {
+    "socials": {
+      "x": "https://x.com/mintlify",
+      "github": "https://github.com/mintlify",
+      "linkedin": "https://linkedin.com/company/mintlify"
+    }
+  }
 }
