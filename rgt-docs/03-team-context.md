@@ -1,4 +1,4 @@
-[← Documentation](/index) / Team context
+[← Documentation](/rgt-docs/index) / Team context
 
 ---
 

@@ -1,4 +1,4 @@
-[← Documentation](/index) / Custom commands
+[← Documentation](/rgt-docs/index) / Custom commands
 
 ---
 

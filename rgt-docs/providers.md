@@ -1,4 +1,4 @@
-[← Documentation](/index) / Providers
+[← Documentation](/rgt-docs/index) / Providers
 
 ---
 

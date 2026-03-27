@@ -1,4 +1,4 @@
-[← Documentation](/index)
+[← Documentation](/rgt-docs/index)
 
 ---
 
