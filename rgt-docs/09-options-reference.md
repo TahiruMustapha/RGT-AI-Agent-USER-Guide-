@@ -1,4 +1,4 @@
-[← Documentation](/index) / Options reference
+[← Documentation](/rgt-docs/index) / Options reference
 
 ---
 

@@ -1,4 +1,4 @@
-[← Documentation](/index) / On-demand triggers
+[← Documentation](/rgt-docs/index) / On-demand triggers
 
 ---
 

@@ -1,4 +1,4 @@
-[← Documentation](/index) / Learning from reactions
+[← Documentation](/rgt-docs/index) / Learning from reactions
 
 ---
 

@@ -1,4 +1,4 @@
-[← Documentation](/index) / FAQ
+[← Documentation](/rgt-docs/index) / FAQ
 
 ---
 
