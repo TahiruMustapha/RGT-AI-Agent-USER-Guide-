@@ -18,7 +18,7 @@ When someone opens or updates a pull request, the bot:
 4. Posts **code suggestions** you can accept in one click
 5. Posts a **summary** at the end with an overall verdict
 
----
+.
 
 ## What a review looks like
 
