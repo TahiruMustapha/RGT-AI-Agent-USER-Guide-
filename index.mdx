@@ -1,18 +1,18 @@
 ---
-title: "Copilot for GitHub — Documentation"
-description: "AI-powered PR reviewer that reads your full codebase, posts inline comments, suggests fixes, and learns from your team's feedback."
+title: "RGT USER GUIDE"
+description: "The official user guide for RGT."
 ---
 
 ## Getting started
 
 New here? Start in order:
 
-| Step | Guide | Time |
-|---|---|---|
-| 1 | [What it does](/rgt-docs/01-what-it-does) | 2 min read |
-| 2 | [Setup](/rgt-docs/02-setup) | 5 min setup |
-| 3 | [Providers](/rgt-docs/providers) | Pick your AI provider |
-| 4 | [Team context](/rgt-docs/03-team-context) | Tell the bot your rules |
+| Step | Guide                                     | Time                    |
+| ---- | ----------------------------------------- | ----------------------- |
+| 1    | [What it does](/rgt-docs/01-what-it-does) | 2 min read              |
+| 2    | [Setup](/rgt-docs/02-setup)               | 5 min setup             |
+| 3    | [Providers](/rgt-docs/providers)          | Pick your AI provider   |
+| 4    | [Team context](/rgt-docs/03-team-context) | Tell the bot your rules |
 
 ---
 
@@ -46,32 +46,32 @@ Copy-paste ready files — drop them into your repo and adjust.
 
 ### Workflow files `.github/workflows/`
 
-| Template | Use when |
-|---|---|
-| [01-basic-review.yml](/templates/workflows/01-basic-review.yml) | Starting point — Google Gemini, every PR |
-| [02-openrouter.yml](/templates/workflows/02-openrouter.yml) | One key for Claude, GPT, Gemini, Llama, and more |
-| [03-filtered-review.yml](/templates/workflows/03-filtered-review.yml) | Scope to branches, labels, or authors |
-| [04-on-demand-only.yml](/templates/workflows/04-on-demand-only.yml) | Manual triggers only — no auto-review |
-| [05-nightly-docs.yml](/templates/workflows/05-nightly-docs.yml) | Nightly docs drift check |
-| [06-weekly-security.yml](/templates/workflows/06-weekly-security.yml) | Weekly security audit |
-| [07-anthropic.yml](/templates/workflows/07-anthropic.yml) | Anthropic Claude |
-| [08-vertex-ai.yml](/templates/workflows/08-vertex-ai.yml) | Google Vertex AI (GCP, no API key) |
-| [09-openai-compatible.yml](/templates/workflows/09-openai-compatible.yml) | Together AI, Fireworks, Ollama, vLLM |
-| [10-amazon-bedrock.yml](/templates/workflows/10-amazon-bedrock.yml) | Amazon Bedrock (AWS) |
+| Template                                                                  | Use when                                         |
+| ------------------------------------------------------------------------- | ------------------------------------------------ |
+| [01-basic-review.yml](/templates/workflows/01-basic-review.yml)           | Starting point — Google Gemini, every PR         |
+| [02-openrouter.yml](/templates/workflows/02-openrouter.yml)               | One key for Claude, GPT, Gemini, Llama, and more |
+| [03-filtered-review.yml](/templates/workflows/03-filtered-review.yml)     | Scope to branches, labels, or authors            |
+| [04-on-demand-only.yml](/templates/workflows/04-on-demand-only.yml)       | Manual triggers only — no auto-review            |
+| [05-nightly-docs.yml](/templates/workflows/05-nightly-docs.yml)           | Nightly docs drift check                         |
+| [06-weekly-security.yml](/templates/workflows/06-weekly-security.yml)     | Weekly security audit                            |
+| [07-anthropic.yml](/templates/workflows/07-anthropic.yml)                 | Anthropic Claude                                 |
+| [08-vertex-ai.yml](/templates/workflows/08-vertex-ai.yml)                 | Google Vertex AI (GCP, no API key)               |
+| [09-openai-compatible.yml](/templates/workflows/09-openai-compatible.yml) | Together AI, Fireworks, Ollama, vLLM             |
+| [10-amazon-bedrock.yml](/templates/workflows/10-amazon-bedrock.yml)       | Amazon Bedrock (AWS)                             |
 
 ### `.reviewerc` files
 
-| Template | Use when |
-|---|---|
-| [01-basic.reviewerc](/templates/reviewerc/01-basic.reviewerc) | Minimal — just set a default model |
-| [02-security.reviewerc](/templates/reviewerc/02-security.reviewerc) | Security scan on every PR |
-| [03-nightly-docs.reviewerc](/templates/reviewerc/03-nightly-docs.reviewerc) | Docs + security on a schedule |
-| [04-full-example.reviewerc](/templates/reviewerc/04-full-example.reviewerc) | All features, commented |
+| Template                                                                    | Use when                           |
+| --------------------------------------------------------------------------- | ---------------------------------- |
+| [01-basic.reviewerc](/templates/reviewerc/01-basic.reviewerc)               | Minimal — just set a default model |
+| [02-security.reviewerc](/templates/reviewerc/02-security.reviewerc)         | Security scan on every PR          |
+| [03-nightly-docs.reviewerc](/templates/reviewerc/03-nightly-docs.reviewerc) | Docs + security on a schedule      |
+| [04-full-example.reviewerc](/templates/reviewerc/04-full-example.reviewerc) | All features, commented            |
 
 ### Context file `.github/`
 
-| Template | Use when |
-|---|---|
+| Template                                                    | Use when                      |
+| ----------------------------------------------------------- | ----------------------------- |
 | [copilot-context.md](/templates/context/copilot-context.md) | Starter team conventions file |
 
 ---
