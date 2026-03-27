@@ -1,4 +1,4 @@
-[← Documentation](/rgt-docs/index) / Filtering PRs
+[← Documentation](/index) / Filtering PRs
 
 ---
 

@@ -1,4 +1,4 @@
-[← Documentation](/rgt-docs/index) / Nightly maintenance
+[← Documentation](/index) / Nightly maintenance
 
 ---
 
