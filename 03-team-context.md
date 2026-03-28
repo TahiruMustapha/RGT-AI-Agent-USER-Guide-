@@ -1,4 +1,4 @@
-[← Documentation](/index) / Team context
+[← Documentation](./index.md) / Team context
 
 ---
 

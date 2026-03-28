@@ -1,4 +1,4 @@
-[← Documentation](/index) / Options reference
+[← Documentation](./index.md) / Options reference
 
 ---
 

@@ -1,4 +1,4 @@
-[← Documentation](/index) / Learning from reactions
+[← Documentation](./index.md) / Learning from reactions
 
 ---
 

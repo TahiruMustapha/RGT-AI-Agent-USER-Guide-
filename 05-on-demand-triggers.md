@@ -1,4 +1,4 @@
-[← Documentation](/index) / On-demand triggers
+[← Documentation](./index.md) / On-demand triggers
 
 ---
 

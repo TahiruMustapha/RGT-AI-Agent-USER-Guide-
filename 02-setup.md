@@ -1,4 +1,4 @@
-[← Documentation](/index) / Setup
+[← Documentation](./index.md) / Setup
 
 ---
 

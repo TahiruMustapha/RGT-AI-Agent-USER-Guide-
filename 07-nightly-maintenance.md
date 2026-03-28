@@ -1,4 +1,4 @@
-[← Documentation](/index) / Nightly maintenance
+[← Documentation](./index.md) / Nightly maintenance
 
 ---
 

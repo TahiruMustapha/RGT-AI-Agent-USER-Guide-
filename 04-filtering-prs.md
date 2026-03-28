@@ -1,4 +1,4 @@
-[← Documentation](/index) / Filtering PRs
+[← Documentation](./index.md) / Filtering PRs
 
 ---
 

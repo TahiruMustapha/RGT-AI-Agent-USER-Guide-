@@ -1,4 +1,4 @@
-[← Documentation](/index) / Custom commands
+[← Documentation](./index.md) / Custom commands
 
 ---
 
