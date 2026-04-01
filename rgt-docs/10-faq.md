@@ -87,4 +87,4 @@ Two options:
 
 ---
 
-[← Options reference](./09-options-reference.md) | [↑ Back to top](./index.md)
+[← Options reference](./09-options-reference) | [↑ Back to top](./index)

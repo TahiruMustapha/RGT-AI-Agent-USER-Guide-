@@ -522,4 +522,4 @@ These shorthand names work anywhere `provider:` is accepted:
 
 ---
 
-[← Setup](./02-setup.md) | [Next: Team context →](./03-team-context.md)
+[← Setup](./02-setup) | [Next: Team context →](./03-team-context)

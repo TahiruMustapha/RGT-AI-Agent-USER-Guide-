@@ -151,4 +151,4 @@ This overrides the workflow `with:` defaults for review runs.
 
 ---
 
-[← On-demand triggers](./05-on-demand-triggers.md) | [Next: Nightly maintenance →](./07-nightly-maintenance.md)
+[← On-demand triggers](./05-on-demand-triggers) | [Next: Nightly maintenance →](./07-nightly-maintenance)

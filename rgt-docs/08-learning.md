@@ -108,4 +108,4 @@ jobs:
 
 ---
 
-[← Nightly maintenance](./07-nightly-maintenance.md) | [Next: Options reference →](./09-options-reference.md)
+[← Nightly maintenance](./07-nightly-maintenance) | [Next: Options reference →](./09-options-reference)

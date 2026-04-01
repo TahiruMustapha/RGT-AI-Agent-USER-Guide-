@@ -130,4 +130,4 @@ The bot posts a short comment on the PR explaining why it was skipped:
 
 ---
 
-[← Team context](./03-team-context.md) | [Next: On-demand triggers →](./05-on-demand-triggers.md)
+[← Team context](./03-team-context) | [Next: On-demand triggers →](./05-on-demand-triggers)

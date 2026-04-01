@@ -149,4 +149,4 @@ Controls how much the model "thinks" before responding. Higher = better quality,
 
 ---
 
-[← Learning from reactions](./08-learning.md) | [Next: FAQ →](./10-faq.md)
+[← Learning from reactions](./08-learning) | [Next: FAQ →](./10-faq)

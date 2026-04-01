@@ -63,4 +63,4 @@ Found 1 high-severity issue, 2 suggestions.
 
 ---
 
-[Next: Setup →](./02-setup.md)
+[Next: Setup →](./02-setup)

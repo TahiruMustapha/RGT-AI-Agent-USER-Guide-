@@ -1,0 +1,4 @@
+/* Hide the search bar entry button */
+#search-bar-entry {
+  display: none !important;
+}

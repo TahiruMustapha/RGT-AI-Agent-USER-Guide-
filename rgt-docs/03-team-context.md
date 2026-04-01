@@ -98,4 +98,4 @@ If you want to store the context file somewhere else, set `context-file` in your
 
 ---
 
-[← Providers](./providers.md) | [Next: Filtering PRs →](./04-filtering-prs.md)
+[← Providers](./providers) | [Next: Filtering PRs →](./04-filtering-prs)

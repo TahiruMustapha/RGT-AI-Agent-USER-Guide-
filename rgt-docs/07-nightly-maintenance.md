@@ -155,4 +155,4 @@ schedule:
 
 ---
 
-[← Custom commands](./06-custom-commands.md) | [Next: Learning from reactions →](./08-learning.md)
+[← Custom commands](./06-custom-commands) | [Next: Learning from reactions →](./08-learning)

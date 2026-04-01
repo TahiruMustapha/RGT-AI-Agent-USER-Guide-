@@ -112,4 +112,4 @@ The workflow permissions block is missing or incomplete. Make sure `pull-request
 
 ---
 
-[← What it does](./01-what-it-does.md) | [Next: Providers →](./providers.md)
+[← What it does](./01-what-it-does) | [Next: Providers →](./providers)

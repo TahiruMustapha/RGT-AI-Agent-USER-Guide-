@@ -98,4 +98,4 @@ Team members type `@my-reviewer review` or `!security` whenever they want a revi
 
 ---
 
-[← Filtering PRs](./04-filtering-prs.md) | [Next: Custom commands →](./06-custom-commands.md)
+[← Filtering PRs](./04-filtering-prs) | [Next: Custom commands →](./06-custom-commands)
